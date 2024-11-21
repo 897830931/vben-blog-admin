@@ -42,7 +42,7 @@ const userConfig = {
     },
     allowCustomIssuePrefixs: false,
     // scopes: [...scopes, 'mock'],
-    allowEmptyIssuePrefixs: false,
+    allowEmptyIssuePrefixs: true,
     customScopesAlign: scopeComplete ? 'bottom' : 'top',
     defaultScope: scopeComplete,
     // English
