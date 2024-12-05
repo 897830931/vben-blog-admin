@@ -101,7 +101,6 @@ function setupAccessGuard(router: Router) {
     accessStore.setAccessRoutes(accessibleRoutes);
     accessStore.setIsAccessChecked(true);
     const redirectPath = (from.query.redirect ?? to.fullPath) as string;
-
     return {
       ...router.resolve(decodeURIComponent(redirectPath)),
       replace: true,

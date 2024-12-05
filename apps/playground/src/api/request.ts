@@ -53,9 +53,9 @@ function createRequestClient(baseURL: string) {
     accessStore.setAccessToken(newToken);
     return newToken;
   }
-
+  // 格式化token
   function formatToken(token: null | string) {
-    return token ? `Bearer ${token}` : null;
+    return token ? `${token}` : null;
   }
 
   // 请求头处理
@@ -75,8 +75,8 @@ function createRequestClient(baseURL: string) {
       const { data: responseData, status } = response;
 
       const { code, data } = responseData;
-
-      if (status >= 200 && status < 400 && code === 0) {
+      // 请求状态码处理 code 1 表示成功 0 表示失败
+      if (status >= 200 && status < 400 && code === 1) {
         return data;
       }
       throw Object.assign({}, response, { response });

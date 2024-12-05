@@ -11,6 +11,10 @@
 具体参照vben-admin的安装依赖
 
 ```bash
+corepack enable
+```
+
+```bash
 pnpm install
 ```
 
